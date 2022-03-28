@@ -162,6 +162,7 @@ public class EnemyWanderState : EnemyBehaviourState
        {
             Instance.SetState(new EnemyIdleState(Instance));
        }
+       //check if the player is within the value radius of the AI
        if(Vector3.Distance(Instance.transform.position, Instance.player.position) <= Instance.viewRadius)
         {
             Instance.SetState(new EnemyChaseState(Instance));
@@ -200,7 +201,7 @@ public class EnemyChaseState : EnemyBehaviourState
     {
         Instance.Agent.SetDestination(Instance.player.position);
      
-      if (Vector3.Distance(Instance.transform.position, Instance.player.position) <= Instance.viewRadius)
+      if (Vector3.Distance(Instance.transform.position, Instance.player.position) > Instance.viewRadius)
       {
          Instance.SetState(new EnemyWanderState(Instance));
       }
