@@ -1,3 +1,13 @@
 AT03 Indie Game/Temp/
 AT03 Indie Game/Library/
 AT03 Indie Game/Logs/
+*.unity
+*.meta
+*.graph
+*.json
+*.asset
+*.md
+*.png
+*.cs
+*.asmdef
+AT03/
